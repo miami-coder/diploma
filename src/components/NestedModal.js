@@ -79,12 +79,14 @@ export default function NestedModal(props) {
 
     if(rooms.length === 0){
       setDoc(doc(db, "users", `${user}`), {
+        // rooms: [{nameRoom: nameRoom, slug: nameRoom}],
         rooms: [nameRoom]
       }, { merge: true });
     }
 
     updateDoc(doc(db, "users", `${user}`), {
       rooms: arrayUnion(nameRoom)
+
     });
   };
 

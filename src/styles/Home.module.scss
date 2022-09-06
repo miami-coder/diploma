@@ -1,5 +1,39 @@
 .container {
-  padding: 0 2rem;
+
+  position: relative;
+  min-height: 100vh;
+
+  & .wrapper {
+    max-width: 860px;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+  }
+
+  & .cardContainer {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+
+    & .addBtn {
+      display: none;
+    }
+
+    &:last-child {
+      & .addBtn {
+        display: block;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 .main {

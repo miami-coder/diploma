@@ -91,7 +91,7 @@ export default function NestedModal(props) {
   };
 
   const handleClose = () => {
-    setOpen(false);
+    bumer(false);
   };
 
   return (
@@ -111,7 +111,7 @@ export default function NestedModal(props) {
             }}
           >
             <Button onClick={addRoom}>Створити</Button>
-            {/* <Button onClick={handleClose}>Скасувати</Button> */}
+            <Button onClick={handleClose}>Скасувати</Button>
           </Box>
         </Box>
       </Modal>

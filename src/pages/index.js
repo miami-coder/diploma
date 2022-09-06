@@ -97,7 +97,7 @@ export default function Home() {
                 <Image src={addIcon} alt="Add room"/>
               </div>
             </div>
-          </div>
+        </div>
       </div>
 
     </div>

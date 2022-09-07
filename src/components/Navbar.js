@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import {signOut, auth, getAuth} from 'firebase/auth'
+import Link from 'next/link';
 
 export default function Navbar() {
 
@@ -28,6 +29,11 @@ export default function Navbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             PalamarHome
           </Typography>
+          <div>
+            <Link href="/control">
+              <a>Керування</a>
+            </Link>
+          </div>
           <Button color="inherit" onClick={() => signOut(auth)}>Sign Out</Button>
         </Toolbar>
       </AppBar>

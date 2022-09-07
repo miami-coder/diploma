@@ -70,6 +70,7 @@ export default function Home() {
 
     setRooms(Object.values(roomsJson["rooms"]))
 
+
   }, [roomsJson])
 
   return (
@@ -87,7 +88,7 @@ export default function Home() {
             <div className={styles.cardContainer}>
               {rooms.map((item, index) => {
                 return (
-                  <div className={styles.roomCard}>
+                  <div key={index} className={styles.roomCard}>
                     <RoomCard roomName={item} />
                     
                   </div>
